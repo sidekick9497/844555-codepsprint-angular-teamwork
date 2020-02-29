@@ -1,1 +1,134 @@
-<p>contact-us works!</p>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    .input-container {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .icon {
+      padding: 10px;
+      background: dodgerblue;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+    
+    .input-field:focus {
+      border: 2px solid dodgerblue;
+    }
+    
+    /* Set a style for the submit button */
+    .btn1 {
+      background-color: dodgerblue;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .btn1:hover {
+      opacity: 1;
+    }
+    </style>
+<div class="container-fluid mb-4 mt-4">
+    <div class="card">
+      <div class="card-block">
+          <div class="card-body">
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-6"><h1 class="card-title">CONTACT US</h1> </div>
+                  <div class="col-3">
+                    <a href="https://www.facebook.com/" >  
+                      <button type="button " class="btn btn-primary"><i class="fab fa-facebook-f"></i></button>
+                    </a>
+                    <a href="https://twitter.com/">
+                      <button type="button btn-primary" class="btn btn-primary"><i class="fab fa-twitter"></i></button>
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?hl=en">
+                      <button type="button btn-primary" class="btn btn-primary"><i class="fab fa-instagram"></i></button>
+                    </a>
+                  </div> 
+                </div>
+          </div>
+      </div>    
+    </div>
+	
+</div>
+
+<div class="container-fluid mt-4 ">
+  <div class="row">
+        <div class="col-3">
+           <div class="card" style="height:400px">
+            <div class="card-block">
+                  <div class="card-body">
+                    <div class="contact-form">
+                          <div class="contact-info">
+                        <!-- <div><img src="assets/images/mail.jpg" alt="image"/></div>-->
+                          <h2>Contact Us</h2>
+                          <h4>We are very happy to help you!!!!</h4>
+                          </div>
+                    </div>
+                </div>
+            </div>
+          </div>  
+        </div>
+        <div class="col-6">
+           <div class="card" style="height:400px">
+                <div class="card-body">
+                       <form style="max-width:500px;margin:auto">
+                                
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="please enter name" name="usrnm">
+                          </div>
+                        
+                          <div class="input-container">
+                            <i class="fa fa-envelope icon"></i>
+                            <input class="input-field" type="text" placeholder="please enter email" name="email">
+                          </div>
+                          
+
+                          <button type="button" class="btn1 btn-primary" [routerLink]="['/thanks']">submit</button>
+                        
+             
+                          
+                        
+                                
+                               <!-- <div class="form-group mt-4">        
+                                    <div class="col-2">
+                                    <a href="thanks.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+                                    </div>
+                                </div> -->
+                        </form>            
+                </div>
+           </div>
+        </div>   
+        <div class="col-3">
+        	<div class="card" style="height:400px">
+        		<div class="card-body">
+        			<h2><u>Address</u></h2>
+        			<p>Arich Infotech Pvt. Ltd.
+        			   Chennai-600 961.</p>
+                     <i class="fas fa-phone">- +91 8885347981</i>
+        			 <i class="fas fa-envelope">- arichinfotech@gmail.com</i>
+        			
+        		</div>
+        	</div>
+        </div>   
+
+   </div>
+</div>  
+
+

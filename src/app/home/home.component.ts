@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-declare var animateLoading:any;
-
-
+declare var animateLoading: any;
+declare var animate: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,6 +12,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     animateLoading();
+
+    setTimeout(() => {
+      animate();
+    }, 3000);
   }
+
 
 }

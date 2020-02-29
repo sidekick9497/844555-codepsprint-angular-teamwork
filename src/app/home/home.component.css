@@ -1,5 +1,6 @@
 .maincontent
 {
-    display: none;
+   display: none;
+   opacity: hidden;
     
 }

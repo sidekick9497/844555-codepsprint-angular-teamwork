@@ -5,11 +5,36 @@ function animateLoading()
     setTimeout(() => {
         $(".loader").hide();
         console.log("showing content")
-        $(".maincontent").show();
-        
+       // $(".maincontent").show();
+       $( ".maincontent" ).fadeIn( 3000, function() {
+        // Animation complete\
+
+      });
     }, 2500);
 }
+function animateNav()
+{   
+    $(".animateNav").css({"visibility":"visible"});
+    /*anime({
+        targets: '.animateNav',
+        
+        duration:2000
+      }).play();
+*/
+}
+function animate()
+{
 
+    console.log("animating");
+
+    anime({
+        targets: '.animatethis',
+        scale:[0,1],
+        translateX: ['-100', '0'],
+        duration:3000
+      }).play();
+      
+}
 function UserDetails(name, address,city,userPackage,trainer,phone) {
     this.name = name;
     this.address = address;

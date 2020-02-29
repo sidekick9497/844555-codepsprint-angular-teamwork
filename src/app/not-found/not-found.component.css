@@ -1,0 +1,8 @@
+.error
+{
+    background:url("/src/assets/images/mainPageBg.svg") cover;
+    position:absolute;
+    top: 35%;
+    left: 20%;
+    color: red;
+}

@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="./index.html"><img width="60" height="50" src="./assets/images/gym.svg" alt=""></a>
+<nav class="navbar animateNav navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['']"><img width="60" height="50" src="./assets/images/gym.svg" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="./placeappiontment.html">Appointment</a>
-            <a class="nav-item nav-link" href="./view-all-appointments.html" tabindex="-1" aria-disabled="true">Appointment List</a>
-            <a class="nav-item nav-link" href="./contact.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+            <a class="nav-item nav-link" [routerLink]='["/appointment"]'>Appointment</a>
+            <a class="nav-item nav-link" [routerLink]='["/viewappointment"]' tabindex="-1" aria-disabled="true">Appointment List</a>
+            <a class="nav-item nav-link" [routerLink]='["/contactus"]' tabindex="-1" aria-disabled="true">Contact Us</a>
         </div>
     </div>
 </nav>

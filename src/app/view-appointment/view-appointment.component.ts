@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppointmentService } from '../service/appointment.service';
+import { Customer } from '../models/customer.model';
 
 @Component({
   selector: 'app-view-appointment',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAppointmentComponent implements OnInit {
 
-  constructor() { }
+  appointmentList: Array<Customer> = new Array<Customer>();
+
+  constructor(public customerService: AppointmentService) {
+    this.customerService.getAllCustomers().subscribe((data: Array<Customer>) => {
+      this.appointmentList = data;
+      console.log(this.appointmentList);
+    });
+  }
+
+
+
 
   ngOnInit(): void {
   }

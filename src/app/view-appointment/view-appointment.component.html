@@ -1,1 +1,37 @@
-<p>view-appointment works!</p>
+
+
+
+    <div class="container-fluid">
+    <div class="table-responsive-sm">
+    <table class="table table-bordered">
+
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">NAME</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Package</th>
+            <th scope="col">Trainer preference</th>
+            <th scope="col">Phone</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointmentList; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{appointment.name | uppercase}}</td>
+              <td>{{appointment.address}}</td>
+              <td>{{appointment.city}}</td>
+              <td>{{appointment.package}}</td>
+              <td>{{appointment.trainer}}</td>
+              <td>{{appointment.phone}}</td>
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+         
+    </div>
+
+

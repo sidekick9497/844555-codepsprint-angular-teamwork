@@ -1,1 +1,429 @@
-<p>appointment works!</p>
+
+<div id="appointment-form"></div>
+<div class="container mt-4 ">
+
+<div class="card"id= "main-form">
+<div class="card-title ml-5 mt-5 bShadow-10">
+  <h1>Enter your details</h1>
+</div>
+<form [formGroup]="customerFormGroup" (ngSubmit)="onSubmit()">
+    <div class="card-body">
+
+    <div class="form-row">
+        <div class="form-group" >
+          <label for="inputFirstname"> Firstname</label>
+          <input type="name" class="form-control" autofocus  [formControl]="customerFormGroup.controls.firstName"  id="inputFirstname" placeholder="Firstname">
+        </div>
+
+        <div class="form-group" >
+            <label for="inputLastname">Lastname</label>
+            <input type="name" class="form-control" id="inputLastname" [formControl]="customerFormGroup.controls.lastName" placeholder="Lastname">
+            </div>
+            </div>
+          
+
+          <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputAge">Age</label>
+                <input type="number" class="form-control" id="inputAge" >
+              </div>
+  
+ 
+                 <div class="form-group  col-md-3">
+                     <label for="inputEmail">Email</label>
+                 <input type="email" class="form-control"  id="inputEmail" placeholder="Email">
+                 </div>
+
+                 <div class="form-group">
+
+                <label for="inputPhonenumber">Phonenumber</label>
+               <input type="number" max="10" class="form-control" [formControl]="customerFormGroup.controls.phone">
+
+                </div>
+                </div>
+
+      <fieldset>
+            <legend>Addresss</legend>
+
+      
+          <div class="form-group">
+            <label for="inputAddress">Address</label>
+             <input type="text" class="form-control" id="inputAddress" [formControl]="customerFormGroup.controls.address" placeholder="Door Number">
+        </div>
+        <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment,Street">
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputCity">City</label>
+            <input type="text" [formControl]="customerFormGroup.controls.city"class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-3">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Kerela</option>
+                <option>Karnataka</option>
+                <option>Tamilnadu</option>
+                <option>Goa</option>  
+            </select>
+
+  </div>
+  <div class="form-group col-md-3">
+      <label for="inputCountry">Country</label>
+      <select id="inputCountry" class="form-control">
+        <option selected>Choose...</option>
+        <option>Australia</option>
+        <option>India</option>
+        <option>Newzland</option>
+        <option>England</option>
+        <option>Srilanka</option>
+        <option>SouthAfrica</option>  
+    </select>
+    </div>
+    </div>
+    <div class="form-row">
+       <div class="form-group ">
+       <label for="inputPincode">Pincode</label>
+       <input type="number" class="form-control" id="inputPincode">
+        
+       </div>
+        </div>
+        <div class="form-row">
+      <div class="form-group">
+        <h2>Trainee Preference</h2>
+        
+        
+          <div>
+            <label><input type="radio" value="Male Trainer" name="trainer-type" [formControl]="customerFormGroup.controls.trainer" >Male Trainer</label>
+          </div>
+          <div>
+            <label><input type="radio" value="Female Trainer"  name ="trainer-type" [formControl]="customerFormGroup.controls.trainer" >Female Trainer</label>
+          </div>
+          <div  >
+            <label><input type="radio" value="No Preference" name="trainer-type" [formControl]="customerFormGroup.controls.trainer"  required>No Preference</label>
+          </div>
+      
+            </div>
+            </div>
+    
+
+      
+    
+
+    <div class="form-group">
+      <h2>Do You Need Physiotherapist</h2>
+      <div class="radio">
+          
+          <label><input type="radio" value="" name="Physiotherapist">Yes</label>
+          <label><input type="radio" value="" name="Physiotherapist">No</label>
+         
+        </div>
+    
+
+ 
+</div>
+ 
+
+<div class="container">
+    <div class="card">
+    <div class="card-header">Appointment:(free)</div>
+
+        <div class="table-responsive-sm">
+    <table class="table table-bordered">
+            <thead class="thead-light">
+        <tr>
+            <th>DAY</th>
+            <th>7 to 9AM</th>
+            <th>9 to 11AM</th>
+            <th>11AM to 1PM</th>
+            <th>1 to 3PM</th>
+            <th>3 to 5PM</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    
+        <tr class="">
+            <td>Monday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="Monday">
+                    <label class="custom-control-label" for="defaultUnchecked1"></label>
+                  </div> 
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked2" name="Monday">
+                    <label class="custom-control-label" for="defaultUnchecked2"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked3" name="Monday">
+                    <label class="custom-control-label" for="defaultUnchecked3"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked4" name="Monday">
+                    <label class="custom-control-label" for="defaultUnchecked4"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked5" name="Monday">
+                    <label class="custom-control-label" for="defaultUnchecked5"></label>
+                </div>
+            </td>
+            
+        </tr>    
+
+        <tr>
+            <td>Tuesday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked6" name="Tuesday">
+                    <label class="custom-control-label" for="defaultUnchecked6"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked7" name="Tuesday">
+                    <label class="custom-control-label" for="defaultUnchecked7"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked8" name="Tuesday">
+                    <label class="custom-control-label" for="defaultUnchecked8"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked9" name="Tuesday">
+                    <label class="custom-control-label" for="defaultUnchecked9"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked10" name="Tuesday">
+                    <label class="custom-control-label" for="defaultUnchecked10"></label>
+                </div>
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td>Wednasday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked11" name="Wednasday">
+                    <label class="custom-control-label" for="defaultUnchecked11"></label>
+                    </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked12" name="Wednasday">
+                    <label class="custom-control-label" for="defaultUnchecked12"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked13" name="Wednasday">
+                    <label class="custom-control-label" for="defaultUnchecked13"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked14" name="Wednasday">
+                    <label class="custom-control-label" for="defaultUnchecked14"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked15" name="Wednasday">
+                    <label class="custom-control-label" for="defaultUnchecked15"></label>
+                </div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked16" name="Thursday">
+                    <label class="custom-control-label" for="defaultUnchecked16"></label>
+                    </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked17" name="Thursday">
+                    <label class="custom-control-label" for="defaultUnchecked17"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked17" name="Thursday">
+                    <label class="custom-control-label" for="defaultUnchecked17"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked18" name="Thursday">
+                    <label class="custom-control-label" for="defaultUnchecked18"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked19" name="Thursday">
+                    <label class="custom-control-label" for="defaultUnchecked19"></label>
+                </div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked20" name="Friday">
+                    <label class="custom-control-label" for="defaultUnchecked20"></label>
+                    </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked21" name="Friday">
+                    <label class="custom-control-label" for="defaultUnchecked21"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked22" name="Friday">
+                    <label class="custom-control-label" for="defaultUnchecked22"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked23" name="Friday">
+                    <label class="custom-control-label" for="defaultUnchecked23"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked24" name="Friday">
+                    <label class="custom-control-label" for="defaultUnchecked24"></label>
+                </div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked25" name="Saturday">
+                    <label class="custom-control-label" for="defaultUnchecked25"></label>
+                    </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked26" name="Saturday">
+                    <label class="custom-control-label" for="defaultUnchecked26"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked27" name="Saturday">
+                    <label class="custom-control-label" for="defaultUnchecked27"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked28" name="Saturday">
+                    <label class="custom-control-label" for="defaultUnchecked28"></label>
+                </div>
+            </td>
+            <td>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked29" name="Saturday">
+                    <label class="custom-control-label" for="defaultUnchecked29"></label>
+                </div>
+            </td>
+            <tr>
+                <td>Sunday</td>
+                <td>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked30" name="Sunday">
+                        <label class="custom-control-label" for="defaultUnchecked30"></label>
+                        </div>
+                </td>
+                <td>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked31" name="Sunday">
+                        <label class="custom-control-label" for="defaultUnchecked32"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked33" name="Sunday">
+                        <label class="custom-control-label" for="defaultUnchecked33"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked34" name="Sunday">
+                        <label class="custom-control-label" for="defaultUnchecked34"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultUnchecked35" name="Sunday">
+                        <label class="custom-control-label" for="defaultUnchecked35"></label>
+                    </div>
+                </td>
+            
+        </tr>
+
+    </tbody>
+</table>
+    <div><h4>Select a package</h4></div>
+    <div class="custom-control custom-radio">
+        <input type="radio" class="inputPackage custom-control-input" [formControl]="customerFormGroup.controls.cost" value="5000" id="defaultUnchecked36" name="one">
+        <label class="custom-control-label" for="defaultUnchecked36">One time assesment only   (RS 5000)</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <input type="radio" class="inputPackage custom-control-input" [formControl]="customerFormGroup.controls.cost" value="4000" id="defaultUnchecked37" name="one">
+        <label class="custom-control-label" for="defaultUnchecked37">4 Weekly sessions   (RS 4000)</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <input type="radio" class="inputPackage custom-control-input"[formControl]="customerFormGroup.controls.cost" value="35000" id="defaultUnchecked38" name="one">
+        <label class="custom-control-label" for="defaultUnchecked38">12 Weekly sessions  (RS 3500)</label>
+    </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="defaultUnchecked39" name="one">
+            <label class="custom-control-label" for="defaultUnchecked39">Others
+                <input type="text" name="Name" required>
+            </label>
+        </div>
+    </div>
+    <div><h5>Quote</h5></div>
+    <div class="row">
+    <div class="col-2">
+        <input type="number" name="inr" id="inr" readonly>
+        </div>
+        
+        <div class="col-2">
+        <input type="number" name="inr" id="inrtwo" value="0.0" readonly>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </fieldset>
+    </div><input type="submit" value="Submit">
+</form>
+    </div>
+    </div>
+
